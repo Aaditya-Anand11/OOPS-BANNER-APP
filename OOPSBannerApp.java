@@ -14,7 +14,7 @@ public class OOPSBannerApp {
             "*   *",
             " *** "
         };
-    }
+    } 
 
     public static String[] getPatternP() {
         return new String[]{
