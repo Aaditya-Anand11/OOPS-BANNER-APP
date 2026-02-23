@@ -1,7 +1,7 @@
 /**
  * OOPS Banner App
  * UC2: Render OOPS banner using string concatenation
- * @author YourName
+ * @author Aaditya Anand
  * @version 2.0
  */
 public class OOPSBannerApp {
@@ -10,6 +10,6 @@ public class OOPSBannerApp {
         System.out.println("*   * *   * *   * *     ");
         System.out.println("*   * *   * ****   ***  ");
         System.out.println("*   * *   * *         * ");
-        System.out.println(" ***   ***  *     **** ");
+        System.out.println(" ***   ***  *     ****  ");
     }
 }
