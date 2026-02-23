@@ -1,49 +1,43 @@
 /**
  * OOPS Banner App
- * UC6: Render OOPS banner using static functions
+ * UC7: Refactor banner using Inner Class
  * @author YourName
- * @version 6.0
+ * @version 7.0
  */
 public class OOPSBannerApp {
 
-    public static String[] getPatternO() {
-        return new String[]{
-            " *** ",
-            "*   *",
-            "*   *",
-            "*   *",
-            " *** "
-        };
-    }
+    static class CharacterPatternMap {
+        private char character;
+        private String[] pattern;
 
-    public static String[] getPatternP() {
-        return new String[]{
-            "**** ",
-            "*   *",
-            "**** ",
-            "*    ",
-            "*    "
-        };
-    }
+        public CharacterPatternMap(char character, String[] pattern) {
+            this.character = character;
+            this.pattern = pattern;
+        }
 
-    public static String[] getPatternS() {
-        return new String[]{
-            " ****",
-            "*    ",
-            " *** ",
-            "    *",
-            "**** "
-        };
+        public char getCharacter() {
+            return character;
+        }
+
+        public String[] getPattern() {
+            return pattern;
+        }
     }
 
     public static void main(String[] args) {
-        String[] o1 = getPatternO();
-        String[] o2 = getPatternO();
-        String[] p  = getPatternP();
-        String[] s  = getPatternS();
+        CharacterPatternMap[] letters = {
+            new CharacterPatternMap('O', new String[]{" *** ", "*   *", "*   *", "*   *", " *** "}),
+            new CharacterPatternMap('O', new String[]{" *** ", "*   *", "*   *", "*   *", " *** "}),
+            new CharacterPatternMap('P', new String[]{"**** ", "*   *", "**** ", "*    ", "*    "}),
+            new CharacterPatternMap('S', new String[]{" ****", "*    ", " *** ", "    *", "**** "})
+        };
 
-        for (int i = 0; i < 5; i++) {
-            System.out.println(o1[i] + "  " + o2[i] + "  " + p[i] + "  " + s[i]);
+        for (int row = 0; row < 5; row++) {
+            StringBuilder line = new StringBuilder();
+            for (CharacterPatternMap letter : letters) {
+                line.append(letter.getPattern()[row]).append("  ");
+            }
+            System.out.println(line);
         }
     }
 }
