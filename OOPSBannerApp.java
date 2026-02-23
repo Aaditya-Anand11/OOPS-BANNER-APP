@@ -1,7 +1,7 @@
 /**
  * OOPS Banner App
  * UC7: Refactor banner using Inner Class
- * @author YourName
+ * @author Aaditya Anand
  * @version 7.0
  */
 public class OOPSBannerApp {
