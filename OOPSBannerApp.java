@@ -1,7 +1,7 @@
 /**
  * OOPS Banner App
  * UC6: Render OOPS banner using static functions
- * @author YourName
+ * @author Aaditya Anand
  * @version 6.0
  */
 public class OOPSBannerApp {
