@@ -1,7 +1,7 @@
 /**
  * OOPS Banner App
  * UC8: Use Map for character patterns and render via function
- * @author YourName
+ * @author Aaditya Anand
  * @version 8.0
  */
 import java.util.LinkedHashMap;
