@@ -1,7 +1,7 @@
 /**
  * OOPS Banner App
  * UC5: Inline array initialization using String.join()
- * @author YourName
+ * @author Aaditya Anand
  * @version 5.0
  */
 public class OOPSBannerApp {
