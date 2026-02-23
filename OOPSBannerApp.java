@@ -19,7 +19,7 @@ public class OOPSBannerApp {
             "*   *",
             " *** "
         });
-
+ 
         map.put('P', new String[]{
             "**** ",
             "*   *",
