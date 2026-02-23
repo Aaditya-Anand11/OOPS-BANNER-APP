@@ -19,7 +19,7 @@ public class OOPSBannerApp {
             return character;
         }
 
-        public String[] getPattern() {
+        public String[] getPattern() { 
             return pattern;
         }
     }
