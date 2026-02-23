@@ -1,11 +1,56 @@
 /**
  * OOPS Banner App
- * UC1: Print OOPS to console
- * @author YourName
- * @version 1.0
+ * UC8: Use Map for character patterns and render via function
+ * @author Aaditya Anand
+ * @version 8.0
  */
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class OOPSBannerApp {
+
+    private static Map<Character, String[]> buildPatternMap() {
+        Map<Character, String[]> map = new LinkedHashMap<>();
+
+        map.put('O', new String[]{
+            " *** ",
+            "*   *",
+            "*   *",
+            "*   *",
+            " *** "
+        });
+
+        map.put('P', new String[]{
+            "**** ",
+            "*   *",
+            "**** ",
+            "*    ",
+            "*    "
+        });
+
+        map.put('S', new String[]{
+            " ****",
+            "*    ",
+            " *** ",
+            "    *",
+            "**** "
+        });
+
+        return map;
+    }
+
+    public static void renderBanner(String word) {
+        Map<Character, String[]> patternMap = buildPatternMap();
+        for (int row = 0; row < 5; row++) {
+            StringBuilder line = new StringBuilder();
+            for (char ch : word.toCharArray()) {
+                line.append(patternMap.get(ch)[row]).append("  ");
+            }
+            System.out.println(line);
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println("OOPS");
+        renderBanner("OOPS");
     }
 }
